@@ -1,0 +1,11 @@
+babelfish==0.5.5
+certifi==2019.3.9
+chardet==3.0.4
+guessit==3.0.3
+idna==2.8
+python-dateutil==2.8.0
+rebulk==1.0.0
+requests==2.21.0
+six==1.12.0
+tmdbsimple==2.2.0
+urllib3==1.24.1
