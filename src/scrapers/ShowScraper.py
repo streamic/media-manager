@@ -31,8 +31,10 @@ class ShowScraper(AbstractScraper):
                     'overview': episode['overview'],
                     'season_number': episode['season_number'],
                     'still_path': episode['still_path'],
-                    'vote_average': episode['vote_average']
-                }
+                    'vote_average': episode['vote_average'],
+                    'air_date': episode['air_date']
+                },
+                'file_path': file_path
             }
 
             return result

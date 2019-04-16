@@ -11,6 +11,18 @@ class MovieScraper(AbstractScraper):
         if file_extension in self.video_extensions:
             title = guessit(filename)['title']
 
-            r = self.tmdb.search_movie(title)
+            movie = self.tmdb.search_movie(title)
 
-            return r
+            result = {
+                'id': movie['id'],
+                'vote_average': movie['vote_average'],
+                'poster_path': movie['poster_path'],
+                'original_title': movie['original_title'],
+                'genre_ids': movie['genre_ids'],
+                'backdrop_path': movie['backdrop_path'],
+                'overview': movie['overview'],
+                'release_date': movie['release_date'],
+                'file_path': file_path
+            }
+
+            return result
