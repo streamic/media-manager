@@ -11,7 +11,6 @@ class MovieScraper(AbstractScraper):
         if file_extension in self.video_extensions:
             title = guessit(filename)['title']
 
-            search = self.tmdb.Search()
-            search.movie(query=title)
+            r = self.tmdb.search_movie(title)
 
-            return search.results[0]
+            return r
